@@ -1,0 +1,76 @@
+@use '../../partials/color.scss' as *;
+@use '../../partials/mixins' as *;
+
+header {
+    width: 100%;
+    background: $graphite;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 12.5rem;
+    padding: 1.5rem 1rem;
+    margin: 0;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 44rem;
+        height: 11.625rem;
+        padding: 1.6875rem 0;
+        margin: 0 auto;
+    }
+
+    @include desktop {
+        width: 63.75rem;
+        padding: 1.6875rem 0;
+    }
+
+    &__logo {
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            margin-top: 5px;
+        }
+    }
+
+    &__button-container {
+        display: flex;
+        justify-content: space-between;
+        width: 21.4375rem;
+
+        @include tablet {
+            width: unset;
+        }
+    }
+
+    &__button {
+        width: 10.1875rem;
+        height: 2.25rem;
+        color: white;
+        font-family: 'titillium-regular', sans-serif;
+        font-weight: 600;
+        color: $cloud;
+        background: $graphite;
+        border-radius: 20px;
+        border: none;
+        padding: 0.5rem 0;
+        cursor: pointer;
+
+        @include tablet {
+            width: auto;
+            height: 2.25rem;
+            padding: 0.5rem 1rem;
+            margin-left: 0.5rem;
+        }
+
+        &--current {
+            color: white;
+            background: $instock-black;
+        }
+    }
+}

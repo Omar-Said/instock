@@ -1,0 +1,172 @@
+@use "../../partials/color" as *;
+@use "../../partials/fonts" as *;
+@use "../../partials/mixins" as *;
+
+.warehouse-detail {
+  position: absolute;
+  left: 4.27%;
+  right: 4.27%;
+  top: 136px;
+  background: $white;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 3px;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 343px;
+
+  @include tablet {
+    width: 704px;
+    top: 92px;
+  }
+
+  @include desktop {
+    width: 1020px;
+  }
+
+  &__header {
+    display: flex;
+    border-bottom: 1px solid $cloud;
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &__goback {
+    margin-left: 1rem;
+    margin-top: 7px;
+    @include tablet {
+      margin-left: 2rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: "titillium-regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    color: $instock-black;
+    margin-left: 0.5rem;
+  }
+
+  &__edit {
+    margin-left: auto;
+    background-color: $instock-indigo;
+    margin-right: 1rem;
+    border-radius: 20px;
+    height: 2.25rem;
+    width: 2.25rem;
+    position: relative;
+
+    @include tablet {
+      margin-right: 2rem;
+      width: 5rem;
+    }
+  }
+
+  &__edit-icon {
+    position: absolute;
+    width: 25px;
+    height: 23px;
+    left: 17.5%;
+    top: 14.49%;
+    @include tablet {
+      left: 14.5%;
+      top: 14.49%;
+    }
+  }
+
+  &__edit-txt {
+    display: none;
+    @include tablet {
+      display: block;
+      position: absolute;
+      left: 50.5%;
+      top: -48.51%;
+      font-family: "titillium-regular";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+      color: $white;
+    }
+  }
+}
+
+.warehouse-details {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  @include tablet {
+    display: flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  &__left {
+    width: 50%;
+
+    @include desktop {
+      width: 66%;
+    }
+  }
+
+  &__info {
+    display: flex;
+
+    @include tablet {
+      border-left: 1px solid #bdc5d5;
+      padding-left: 2.5rem;
+      width: 70%;
+    }
+    @include desktop {
+      margin-right: 3rem;
+    }
+  }
+
+  &__header {
+    font-family: "titillium-regular";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $slate;
+    margin-bottom: 0.5rem;
+
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+
+  &__txt {
+    font-family: "titillium-regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: $instock-black;
+    margin: 0;
+  }
+
+  &__info-right {
+    width: 68%;
+  }
+
+  &__footer {
+    width: 100%;
+    position: absolute;
+    bottom: -105rem;
+    color: #5c667e;
+    font-size: 0.6875rem;
+    line-height: 1rem;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 2.5rem;
+    @include tablet {
+      bottom: -10rem;
+    }
+  }
+}

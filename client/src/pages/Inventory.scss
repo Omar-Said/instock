@@ -1,0 +1,121 @@
+@use '../partials/color.scss' as *;
+@use '../partials/mixins' as *;
+
+.inventory {
+    height: 145.25rem;
+    position: relative;
+
+    &--add {
+        height: 69.125rem;
+        
+        @include tablet {
+            height: 64rem;
+        }
+    
+        @include desktop {
+            height: 57.8125rem;
+        }
+    }
+
+    @include tablet {
+        height: 64rem;
+    }
+
+    @include desktop {
+        height: 57.8125rem;
+    }
+
+    &__footer {
+        width: 100%;
+        position: absolute;
+        bottom: 2.5rem;
+        color: $slate;
+        font-size: 0.6875rem;
+        line-height: 1rem;
+        text-align: center;
+        margin: 0;
+    }
+
+}
+
+.delete-modal {
+    position: fixed;
+    top: 0;
+    background: rgb(19 22 33 / 50%);
+    width: 100%;
+    height: 100%;
+
+    &__content {
+        background: white;
+        width: 100%;
+        height: 100%;
+        padding: 60px 16px;
+        position: relative;
+
+        @include tablet {
+            width: 672px;
+            height: auto;
+            padding: 40px 64px;
+            margin: 185px auto 0;
+        }
+    }
+
+    &__delete {
+        margin: 0;
+        line-height: 36px;
+        font-size: 28px;
+        color: $instock-black;
+    }
+
+    &__paragraph {
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        height: 36px;
+        justify-content: flex-end;
+        position: absolute;
+        top: 607px;
+        right: 16px;
+
+        @include tablet {
+            position: initial;
+            margin: 17px 0 0 0;
+        }
+    }
+
+    &__btn {
+        background:$white;
+        border: 1px solid $cloud;
+        border-radius: 20px;
+        box-sizing: border-box;
+        width: 144px;
+        height: 36px;
+        font-family: "titillium-regular";
+
+        @include tablet {
+            width: 72px;
+            height: 38px;
+            
+        }
+    }
+
+    &__btn--delete {
+        background-color: $red;
+        color: $white;
+        margin-left: 17px;
+
+        @include tablet {
+            margin-left: 16px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 21px;
+        right: 21px;
+    }
+}

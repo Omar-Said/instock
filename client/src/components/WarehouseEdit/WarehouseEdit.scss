@@ -1,0 +1,242 @@
+@use "../../partials/color" as *;
+@use "../../partials/fonts" as *;
+@use "../../partials/mixins" as *;
+
+.warehouse-edit {
+  position: absolute;
+  left: 4.27%;
+  right: 4.27%;
+  top: 136px;
+  background: $white;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 3px;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 343px;
+
+  @include tablet {
+    width: 704px;
+    top: 92px;
+  }
+
+  @include desktop {
+    width: 1020px;
+  }
+
+  &__header {
+    display: flex;
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &__goback {
+    margin-left: 1rem;
+    margin-top: 6px;
+    @include tablet {
+      margin-left: 2rem;
+      margin-top: 10px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: "titillium-regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    color: $instock-black;
+    margin-left: 0.5rem;
+
+    @include tablet {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  &__form {
+    @include tablet {
+      border-top: 1px solid $cloud;
+    }
+  }
+
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__details {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid $cloud;
+    @include tablet {
+      border-top: none;
+      width: 50%;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 0;
+      border-right: 1px solid $cloud;
+      margin-bottom: 2rem;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    @include desktop {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  &__details-title {
+    font-family: "titillium-regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__details-label {
+    font-family: "titillium-regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 4px;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__details-input {
+    background: $white;
+    border: 1px solid $cloud;
+    border-radius: 20px;
+    height: 2rem;
+    width: 100%;
+    padding-left: 1rem;
+    outline: none;
+    font-family: "titillium-regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+
+    &:hover {
+      border: 1px solid $instock-indigo;
+    }
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__details-CTA {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: rgba(247, 248, 249, 0.7);
+    height: 4.25rem;
+
+    @include tablet {
+      justify-content: flex-end;
+      height: 4.375;
+      padding-right: 2.5rem;
+      padding-left: 2.5rem;
+    }
+  }
+
+  &__details-cancel {
+    width: 139px;
+    height: 35px;
+    background: $white;
+    border: 1px solid $cloud;
+    border-radius: 20px;
+    font-family: "titillium-regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    color: $slate;
+    outline: none;
+
+    &:hover {
+      border: 1px solid $instock-indigo;
+      color: $instock-indigo;
+    }
+
+    @include tablet {
+      width: 72px;
+      font-size: 14px;
+      margin-right: 1rem;
+    }
+  }
+
+  &__details-save {
+    width: 139px;
+    background: $instock-indigo;
+    border: 1px solid $cloud;
+    border-radius: 20px;
+    font-family: "titillium-regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    color: $white;
+    outline: none;
+
+    @include tablet {
+      width: 61px;
+      font-size: 14px;
+    }
+  }
+
+  &__details-input--error {
+    border: 2px solid $red;
+    margin-bottom: 0.25rem;
+
+    &:focus {
+      border: 2px solid $red;
+      outline: none;
+    }
+  }
+
+  &__details-input-error {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    color: $red;
+    margin: 0;
+  }
+
+  &__details-input-icon {
+    height: 14px;
+    margin: 0 0 0 0.75rem;
+  }
+
+  &__details-footer {
+    width: 100%;
+    position: absolute;
+    bottom: -18rem;
+    color: #5c667e;
+    font-size: 0.6875rem;
+    line-height: 1rem;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 2.5rem;
+
+    @include tablet {
+      bottom: -4rem;
+    }
+  }
+}

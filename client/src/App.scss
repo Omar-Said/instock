@@ -1,0 +1,19 @@
+@use './partials/fonts' as *;
+@use './partials/color' as *;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "titillium-regular", sans-serif;
+  color: $instock-black;
+  background: $light-grey;
+  margin: 0;
+}
